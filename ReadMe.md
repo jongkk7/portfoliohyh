@@ -6,7 +6,7 @@
 2. Storage (파일 저장소)에 가서 profile.png를 삭제하고 바꾸고 싶은 프로필로 업로드한다.<br>
 
 3. 업로드된 profile.png를 클릭하고 나오는 다운로드 URL을 복사(한번 클릭하면 복사됨)한다.<br>
-![업로드이미지](./img/img_profile_url.png)
+![업로드이미지](./img/img_profile_url.PNG)
 
 4. IDE( 드림위버 or 아톰 .. )에서 프로젝트 파일을 연다
 
@@ -46,7 +46,7 @@ firebase deploy
            - img_path :
            - path :
 
-![업로드이미지](./img/img_add_sns.png)
+![업로드이미지](./img/img_add_sns.PNG)
 
 7. 배포한다. ( 프로필바꾸기의 7번부터 참조 )
 
