@@ -50,20 +50,27 @@
 > 링크 변경 : portfoliohyh/public/index.html 파일에서 해당 sns-item를 찾은 후 <br>
 > href의 주소값을 변경한다. <br>
 > sns 추가 : portfoliohyh/public/res/sns 폴더에 이미지를 추가한다. <br>
-> portfoliohyh/public/index.html 파일에서 sns-item가 있는 부분에 <br>
-> <a class="sns-item" href='연결할 링크' class="circle_item"><img class="sns-img" src='./res/sns/lottie.png'/></a></li> 를 추가한다.
+> portfoliohyh/public/index.html 파일에서 sns-item가 있는 부분에 아이템 추가한다.<br>
+
+``` html
+ <a class="sns-item" href='연결할 링크' class="circle_item"><img class="sns-img" src='./res/sns/lottie.png'/></a></li>
+```
 
 + 카테고리 메뉴 변경 및 추가 <br>
 > 카테고리 이미지 변경 : portfoliohyh/public/res/ic 폴더에서 해당 이미지 변경 <br>
 > 카테고리 명칭 변경 : portfoliohyh/public/index.html 에서 category 섹션을 찾아 변경 <br>
 > 카테고리 메뉴 추가 : portfoliohyh/public/res/ic 폴더에 이미지 추가 후 <br>
-> portfoliohyh/public/index.html 에서 category 섹션을 찾아 <br>
-> <a id="menu"><img id="menu_img" class="category-icon" src='./res/ic/ic_menu.png'/><span> 메뉴</span></a> <br>
+> portfoliohyh/public/index.html 에서 category 섹션을 찾아 추가한다. <br>
+
+``` html
+<a id="menu"><img id="menu_img" class="category-icon" src='./res/ic/ic_menu.png'/><span> 메뉴</span></a>
+```
+
 > 추가 시 갯수에 맞추어 추가 <br>
 > portfoliohyh/public/assets/js/main.js 파일에서 setCategoryMenu메소드에 해당 메뉴 클릭이벤트 추가 <br>
 
 
-#### 4. 동적 변경 ( Firebase에서 Database, store 만 수정
+#### 4. 동적 변경 ( Firebase에서 Database, store 만 수정 )
 
 
 
