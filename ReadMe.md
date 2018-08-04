@@ -1,55 +1,81 @@
-# 녕희의 포트폴리오 사이트 사용법
-#### 프로필 이미지 바꾸기!
-1. 웹에서 firebase 콘솔 로그인<br>
-[Firebase Console](https://console.firebase.google.com)
+# 포트폴리오 가이드
 
-2. Storage (파일 저장소)에 가서 profile.png를 삭제하고 바꾸고 싶은 프로필로 업로드한다.<br>
+#### 1. 패키지 구조
+![패키지구조](./img/img_package.PNG) <br><br>
++ ReadMe.md : 설명 페이지 <br>
++ img : 설명 스크린샷 이미지 <br>
++ public : 소스 폴더
++ index.html : 제일 먼저 열리는 디폴트 페이지 <br>
++ assets/css/main.css : index.html을 꾸미는 css파일 <br>
++ assets/js/main.js : 각종 이벤트 제어 <br>
++ res/ic : 카테고리 이미지
++ res/sns : sns 이미지
++ bg.png , profile.png : 배경, 프로필이미지
 
-3. 업로드된 profile.png를 클릭하고 나오는 다운로드 URL을 복사(한번 클릭하면 복사됨)한다.<br>
-![업로드이미지](./img/img_profile_url.PNG)
 
-4. IDE( 드림위버 or 아톰 .. )에서 프로젝트 파일을 연다
 
-5. portfoliohyh/public/assets/js/indexjs.js파일을 연다.
+#### 2. 변경 시 알아야 할 점
+변경하고 싶은 부분에 따라 2가지의 경우로 나뉜다.
 
-6. var profile_url = '' <= 이부분에 복사한 url을 넣는다
++ 서버를 다시 배포해야 하는 경우
+> 배경, 프로필 이미지<br>
+> 이름 , 간단한 소개 <br>
+> 경력 , 학력 , 수상 & 사용 툴<br>
+> SNS 리스트 <br>
+> 카테고리 <br>
+> Footer ( 맨 밑글 ) <br>
+---> 변경 후 저장한 뒤 서버 배포 <br>
 
-7. console(명령 프롬프트)를 연다.
- ( 윈도우키 + R키 --> cmd 검색 )
++ 데이터만 바꿔주어도 되는 경우
+> 리스트의 각 하나의 아이템 <br>
+> ex) 모바일 -> 캐시카우의 타이틀 변경 <br>
+> ex) 아이콘 -> gif 추가 <br>
+> ex) 영상 -> 유투브 주소 변경 <br>
+> <br>
+> 주의 ! <br>
+> 카테고리의 아이템이 특별한 경우를 가질 경우 개발자와 상담해보세요.<br>
 
-8. 프로젝트 파일까지 접근한다.
-TODO : 녕쨩 데스크탑에서 파일 위치, 접근 경로
-cd portfoliohyh
 
-8. 배포한다. ( 최종적으로 파일을 올려서 다른사람들도 볼 수 있는 사이트를 '배포'한다 )
-firebase deploy
+#### 3. 정적 변경 ( 서버 다시 배포 )
++ 배경 , 프로필 이미지 변경<br>
+> portfoliohyh/public/res 파일에서 <br>
+> bg.png & profile.png 파일을 바꿔준다.
 
-9. 종권님에게 감사한 마음을 가지도록 한다.
++ 이름 , 간단한소개 , 경력&학력&수상,사용툴 , footer 변경 <br>
+> portfoliohyh/public/index.html 파일에서 <br>
+> 바꾸고 싶은 곳을 찾아 바꾼다.. <br>
 
-#### SNS 바꾸는 방법 !
++ sns 리스트 변경 및 추가 <br>
+> 이미지 변경 : portfoliohyh/public/res/sns 폴더에서 해당 이미지를 변경한다. <br>
+> 링크 변경 : portfoliohyh/public/index.html 파일에서 해당 sns-item를 찾은 후 <br>
+> href의 주소값을 변경한다. <br>
+> sns 추가 : portfoliohyh/public/res/sns 폴더에 이미지를 추가한다. <br>
+> portfoliohyh/public/index.html 파일에서 sns-item가 있는 부분에 <br>
+> <a class="sns-item" href='연결할 링크' class="circle_item"><img class="sns-img" src='./res/sns/lottie.png'/></a></li> 를 추가한다.
 
-1. 웹에서 firebase 콘솔 로그인
-[Firebase Console](https://console.firebase.google.com)
++ 카테고리 메뉴 변경 및 추가 <br>
+> 카테고리 이미지 변경 : portfoliohyh/public/res/ic 폴더에서 해당 이미지 변경 <br>
+> 카테고리 명칭 변경 : portfoliohyh/public/index.html 에서 category 섹션을 찾아 변경 <br>
+> 카테고리 메뉴 추가 : portfoliohyh/public/res/ic 폴더에 이미지 추가 후 <br>
+> portfoliohyh/public/index.html 에서 category 섹션을 찾아 <br>
+> <a id="menu"><img id="menu_img" class="category-icon" src='./res/ic/ic_menu.png'/><span> 메뉴</span></a> <br>
+> 추가 시 갯수에 맞추어 추가 <br>
+> portfoliohyh/public/assets/js/main.js 파일에서 setCategoryMenu메소드에 해당 메뉴 클릭이벤트 추가 <br>
 
-2. Storage (파일 저장소)에 가서 추가하고싶은 파일을 올린다.
 
-3. 업로드된 파일를 클릭하고 나오는 다운로드 URL을 복사(한번 클릭하면 복사됨)한다.
+#### 4. 동적 변경 ( Firebase에서 Database, store 만 수정
 
-4. Database -> 실시간 데이터베이스로 간다.
 
-5. portfoliohyh
-     - sns               <---- 이부분에 마우스를 가져다 대서 +를 누른다
-        - facebook
-           - img_path :
-           - path :
-        - instargram
-           - img_path :
-           - path :
 
-![업로드이미지](./img/img_add_sns.PNG)
 
-7. 배포한다. ( 프로필바꾸기의 7번부터 참조 )
+#### 5. 기타
 
-8. 종권님에게 감사한 마음을 가지도록 한다.
 
-=================================================================================
+
+
+#### 6. 도움주신 분
+``` java
+  String developer = "유종권";
+  String deginer = "한영희";
+
+```
