@@ -1,6 +1,6 @@
 # 포트폴리오 가이드
 
-#### 1. 패키지 구조
+### 1. 패키지 구조
 ![패키지구조](./img/img_package.PNG) <br><br>
 + ReadMe.md : 설명 페이지 <br>
 + img : 설명 스크린샷 이미지 <br>
@@ -14,7 +14,7 @@
 
 
 
-#### 2. 변경 시 알아야 할 점
+### 2. 변경 시 알아야 할 점
 변경하고 싶은 부분에 따라 2가지의 경우로 나뉜다.
 
 + 서버를 다시 배포해야 하는 경우
@@ -36,7 +36,7 @@
 > 카테고리의 아이템이 특별한 경우를 가질 경우 개발자와 상담해보세요.<br>
 
 
-#### 3. 정적 변경 ( 서버 다시 배포 )
+### 3. 정적 변경 ( 서버 다시 배포 )
 + 배경 , 프로필 이미지 변경<br>
 > portfoliohyh/public/res 파일에서 <br>
 > bg.png & profile.png 파일을 바꿔준다.
@@ -70,17 +70,17 @@
 > portfoliohyh/public/assets/js/main.js 파일에서 setCategoryMenu메소드에 해당 메뉴 클릭이벤트 추가 <br>
 
 
-#### 4. 동적 변경 ( Firebase에서 Database, store 만 수정 )
+### 4. 동적 변경 ( Firebase에서 Database, store 만 수정 )
 
 
 
 
-#### 5. 기타
+### 5. 기타
 
 
 
 
-#### 6. 도움주신 분
+### 6. 도움주신 분
 ``` java
   String developer = "유종권";
   String deginer = "한영희";

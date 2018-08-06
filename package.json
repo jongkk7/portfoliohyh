@@ -1,0 +1,22 @@
+{
+  "name": "portfoliohyh",
+  "version": "1.0.0",
+  "description": "포트폴리오사이트<br>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jongkk7/portfoliohyh.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jongkk7/portfoliohyh/issues"
+  },
+  "homepage": "https://github.com/jongkk7/portfoliohyh#readme",
+  "dependencies": {
+    "sweetalert2": "^7.25.6"
+  }
+}

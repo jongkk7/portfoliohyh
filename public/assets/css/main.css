@@ -1,0 +1,400 @@
+/*
+  사용하는 모든 태그에 미리 설정을 해두는 부분
+  margin을 0으로 두지않으면 기본적으로 조금의 마진이 있다.
+*/
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img,
+em, strong, small, i, b, dl, dt, ol, ul, li, form, label,
+table, tbody, tfoot, tr, td, th, article, aside, canvas,
+details, embed, footer, header, hgroup, menu, nav, output,
+section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: 'Nanum Myeongjo', serif;
+	vertical-align: middle;
+}
+
+/*
+  http://aboooks.tistory.com/85
+  display : inline / block / none / inline-block
+  block으로 두면 해당 클래스가 가로 100%를 차지한다.
+  inline 줄바꿈 x
+  none 박스 생성 x
+  inline-block 요소는 lnline인데 내부는 block처럼 표시함.
+ */
+article, aside, details, footer, header, menu, nav, section{
+  display: block;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+/*
+  padding: top right bottom left
+
+
+*/
+
+/* ************************************************************
+                        Header
+
+  background, 프로필이미지, 이름, 하고싶은말, sns
+************************************************************ */
+  #header {
+    text-align: center;
+    display: block;
+  }
+
+  #header .profile-box {
+    width: 100%;
+    height: 260px;
+    display: block;
+  }
+
+  #header .background_profile {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    z-index: 1
+  }
+
+  #header .profile {
+    width: 150px;
+    height: 150px;
+    top: -85px;
+    position: relative;
+    z-index: 2
+  }
+
+  #header .name {
+    font-size: 18pt;
+    padding: 10px 0px 10px 0;
+    display: block;
+  }
+
+  #header .say {
+    font-size: 8pt;
+    color: #606060;
+  }
+
+  #header .sns-list {
+    width: auto;
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+  }
+
+  #header .sns-item {
+    margin: 0 0 0 0;
+    padding: 0 5pt 0 5pt;
+    border : 0;
+  }
+
+  #header .sns-img {
+    width: 30px;
+    height: 30px;
+  }
+
+
+  /* ************************************************************
+                          Main
+
+        자기소개 , 카테고리메뉴 , 썸네일 리스트
+  ************************************************************ */
+
+ /* 자기소개 - 경력 & 학력 & 수상 + 사용툴 */
+  #main {
+    display: block;
+    margin-top: 40pt;
+  }
+
+  #main div {
+    color: #fff;
+  }
+
+  #main #infomations {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  #main #infomations .info-item {
+    width: 24%;
+    margin: 0 20px 0 20px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  #main #infomations .info-item p {
+    font-weight: bold;
+    color: black;
+  }
+
+  #main p {
+    font-size: 10pt;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  #main li {
+    font-size: 7pt;
+    margin-bottom: 3px;
+  }
+
+  #main #infomations .info-item .info-detail{
+    font-size: 8pt;
+    color: #606060;
+    padding-left: 10px;
+  }
+
+  /* 카테고리 메뉴  */
+  #main #category {
+    height: 60px;
+    width: 100%;
+  }
+  #main #category .dropdown {
+    visibility: hidden;
+  }
+  #main #category #menu {
+    display: block;
+    text-align: right;
+    vertical-align: middle;
+    padding: 20px 90px 20px 0;
+  }
+
+  /* 카테고리 고정 */
+  .category_fixed {
+    top: 0;
+    right: 0;
+    height: 60px;
+    width: 100%;
+    text-align: right;
+    background-color: #fff;
+    z-index: 999;
+    position: fixed;
+  }
+
+  .category_fixed  div {
+    padding: 20px 90px 20px 0;
+  }
+
+
+
+  #main #category a {
+    display: inline-block;
+    font-size: 12pt;
+    text-decoration: none;
+    vertical-align: middle;
+    margin-right: 20px;
+    color: black;
+  }
+
+  #main #category a img {
+    width: 17px;
+    height: 17px;
+  }
+
+  #main .category_fixed a {
+    display: inline-block;
+    font-size: 12pt;
+    text-decoration: none;
+    vertical-align: middle;
+    margin-right: 20px;
+    color: black;
+  }
+  #main .category_fixed a img {
+    width: 17px;
+    height: 17px;
+  }
+
+
+
+  /* list */
+  #list {
+    display: -moz-grid;
+		display: -webkit-grid;
+		display: -ms-grid;
+		display: grid;
+		-moz-flex-direction: row;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+    flex-direction: row;
+		position: relative;
+		margin: 0 100px 0 100px;
+		grid-template-columns: 1fr 1fr 1fr;
+  }
+
+
+  #list a {
+    -moz-transition: all 0.2s ease;
+		-webkit-transition: all 0.2s ease;
+		-ms-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+    border-bottom: none;
+    display: block;
+    padding: 5px 5px 5px 5px;
+    cursor:pointer;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+		text-align: center;
+		border-radius: 4px;
+		box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
+		background-color: rgba(255, 255, 255, 0.075);
+    text-decoration: none;
+    color: black;
+  }
+
+  #list a img {
+    display: block;
+		width: 100%;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+  }
+
+  #list a h3 {
+    margin: 10px;
+  }
+
+  #list a:hover {
+    cursor: zoom-in;
+    -webkit-filter: opacity(85%) brightness(0.8);
+		background-color: rgba(255, 255, 255, 0.25);
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #888888;
+	}
+
+
+
+  /* ************************************************************
+                            footer
+
+  ************************************************************ */
+  #footer {
+    background: #333;
+    text-align: center;
+    padding: 30px 0 30px 0;
+    margin-top: 130px;
+  }
+
+  #footer p {
+    color: #fff;
+    font-size: 9pt;
+    line-height: 20px;
+  }
+
+  /* ************************************************************
+                            반응형
+
+  ************************************************************ */
+
+  @media ( max-width: 1000px ) {
+    #main #infomations .info-item {
+      width: 50%;
+      margin: 10px 10px 20px 10px;
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    #list {
+      display: -moz-grid;
+  		display: -webkit-grid;
+  		display: -ms-grid;
+  		display: grid;
+  		-moz-flex-direction: row;
+  		-webkit-flex-direction: row;
+  		-ms-flex-direction: row;
+      flex-direction: row;
+  		position: relative;
+  		margin: 0 60px 0 60px;
+  		grid-template-columns: 1fr 1fr 1fr;
+    }
+
+  }
+
+
+  @media ( max-width: 900px ) {
+    #main #infomations .info-item {
+      width: 60%;
+      margin: 10px 10px 20px 10px;
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    #list {
+      display: -moz-grid;
+  		display: -webkit-grid;
+  		display: -ms-grid;
+  		display: grid;
+  		-moz-flex-direction: row;
+  		-webkit-flex-direction: row;
+  		-ms-flex-direction: row;
+      flex-direction: row;
+  		position: relative;
+  		margin: 0 70px 0 70px;
+  		grid-template-columns: 1fr 1fr;
+    }
+
+  }
+
+  @media ( max-width: 700px ) {
+    #header .say {
+      font-size: 8pt;
+      margin: 0 15px 0 15px;
+    }
+
+    #main #infomations .info-item {
+      width: 80%;
+      margin: 10px 10px 20px 10px;
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    #main .category {
+      height: 100px;
+      width: 100%;
+      text-align: center;
+      vertical-align: middle;
+    }
+    #main .category div {
+      padding: 20px 10px 20px 10px;
+    }
+
+
+    .category_fixed {
+      cursor:pointer;
+      top: 0;
+      right: 0;
+      height: 100px;
+      width: 100%;
+      text-align: center;
+      background-color: #fff;
+      z-index: 999;
+      position: fixed;
+    }
+
+    .category_fixed  div {
+      cursor:pointer;
+      padding: 20px 10px 20px 10px;
+    }
+
+    #list {
+      display: -moz-grid;
+      display: -webkit-grid;
+      display: -ms-grid;
+      display: grid;
+      -moz-flex-direction: row;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      position: relative;
+      margin: 0 30px 0 30px;
+      grid-template-columns: 1fr;
+    }
+  }
